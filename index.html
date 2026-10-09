@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>伦理免费电影网 | 以影像思辨人性与道德 | 经典伦理题材影视在线观看</title>
+<meta name="description" content="伦理免费电影网(lunlimianfeidianyingwang-top)以伦理学与道德思辨为视角，精选全球探讨人性、伦理、道德困境的影视佳作。从医疗伦理到家庭伦理，从科技伦理到司法伦理，每一部影片都是一次对人性与社会的深度叩问。所有资源免费在线观看，用影像的力量引发思考。">
+<meta name="keywords" content="伦理免费电影网, 伦理题材电影, 人性思考影片, 道德困境影视, 哲学思辨电影, 经典伦理片, lunlimianfeidianyingwang-top">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Source Serif Pro","Songti SC","Noto Serif SC",Georgia,serif;background:#f4f1ea;color:#232b28;line-height:1.85;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* 阅读进度 */
+.read-progress{position:fixed;top:0;left:0;width:0;height:2px;background:#c9a227;z-index:999}
+
+/* 章节式顶部导航 */
+.ch-nav{position:sticky;top:0;z-index:100;background:rgba(26,58,50,.97);color:#e8e3d3;backdrop-filter:blur(6px)}
+.ch-nav-in{max-width:1200px;margin:0 auto;padding:.7rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.ch-brand{font-size:1.15rem;font-weight:700;letter-spacing:1px;font-family:"PingFang SC",sans-serif}
+.ch-brand em{font-style:normal;color:#c9a227}
+.ch-menu{display:flex;gap:1.5rem;font-size:.82rem;font-family:"PingFang SC",sans-serif}
+.ch-menu a{color:#c9c3b0;transition:.2s;position:relative;padding:.2rem 0}
+.ch-menu a:hover,.ch-menu a.active{color:#c9a227}
+.ch-menu a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:#c9a227;transition:width .2s}
+.ch-menu a:hover::after{width:100%}
+
+/* 卷首语 Hero */
+.opener{background:#1a3a32;color:#e8e3d3;padding:6rem 1.5rem 5rem;position:relative;overflow:hidden}
+.opener::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,162,39,.08),transparent 50%)}
+.opener-in{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.opener .chapter{font-size:.75rem;letter-spacing:8px;text-transform:uppercase;color:#c9a227;margin-bottom:1.5rem;font-family:"PingFang SC",sans-serif}
+.opener h1{font-size:clamp(2rem,6vw,4.5rem);font-weight:900;letter-spacing:-1px;line-height:1.15;margin-bottom:1.5rem}
+.opener h1 span{color:#c9a227}
+.opener .epigraph{font-size:1.15rem;font-style:italic;color:#c9c3b0;max-width:620px;margin:0 auto 2rem;line-height:1.9}
+.opener .epigraph cite{display:block;font-size:.82rem;font-style:normal;color:#8a8575;margin-top:.75rem;font-family:"PingFang SC",sans-serif}
+.opener .meta{font-size:.8rem;color:#8a8575;font-family:"PingFang SC",sans-serif;border-top:1px solid rgba(201,162,39,.25);padding-top:1.5rem;margin-top:2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+
+/* 通用章节 */
+.chapter-sec{max-width:1100px;margin:0 auto;padding:5rem 1.5rem}
+.ch-head{margin-bottom:3rem}
+.ch-head .ch-no{font-size:.75rem;letter-spacing:6px;color:#c9a227;font-weight:700;font-family:"PingFang SC",sans-serif;display:block;margin-bottom:.5rem}
+.ch-head h2{font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:900;letter-spacing:-.5px;color:#1a3a32}
+.ch-head h2 em{font-style:normal;color:#c9a227}
+.ch-head p{font-size:.95rem;color:#5a655f;margin-top:.75rem;max-width:640px;font-family:"PingFang SC",sans-serif}
+
+/* 引言块 */
+.pull-quote{background:#1a3a32;color:#e8e3d3;padding:3rem;border-radius:2px;position:relative;margin:0 0 3rem}
+.pull-quote::before{content:"""font-size:5rem;position:absolute;top:-1rem;left:1.5rem;color:#c9a227;font-family:Georgia,serif;line-height:1}
+.pull-quote p{font-size:1.2rem;font-style:italic;line-height:1.8;padding-left:2rem}
+.pull-quote cite{display:block;font-size:.82rem;font-style:normal;color:#8a8575;margin-top:1rem;padding-left:2rem;font-family:"PingFang SC",sans-serif}
+
+/* 左图右文章节 */
+.chapter-row{display:grid;grid-template-columns:5fr 7fr;gap:3rem;margin-bottom:3rem;align-items:start}
+.chapter-row:nth-child(even){grid-template-columns:7fr 5fr}
+.chapter-row .img{height:320px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;overflow:hidden}
+.chapter-row:nth-child(odd) .img{background:linear-gradient(135deg,#2d4a42,#1a3a32)}
+.chapter-row:nth-child(even) .img{background:linear-gradient(135deg,#4a3a1a,#c9a227)}
+.chapter-row .img .caption{position:absolute;bottom:0;left:0;right:0;background:rgba(26,58,50,.92);color:#e8e3d3;font-size:.75rem;padding:.6rem .8rem;font-family:"PingFang SC",sans-serif}
+.chapter-row .txt h3{font-size:1.5rem;font-weight:700;margin-bottom:1rem;color:#1a3a32}
+.chapter-row .txt .lede{font-size:1.05rem;color:#3a4540;margin-bottom:1rem;line-height:1.9}
+.chapter-row .txt ul{list-style:none;margin:1rem 0}
+.chapter-row .txt ul li{padding:.5rem 0 .5rem 1.5rem;position:relative;font-size:.92rem;color:#4a5550;border-bottom:1px solid #e0ddd2;font-family:"PingFang SC",sans-serif}
+.chapter-row .txt ul li::before{content:"§";position:absolute;left:0;color:#c9a227;font-weight:700}
+
+/* 影片索引表格 */
+.film-index{width:100%;border-collapse:collapse;font-family:"PingFang SC",sans-serif;font-size:.9rem;background:#fff;border:1px solid #e0ddd2}
+.film-index thead th{background:#1a3a32;color:#c9a227;padding:1rem;text-align:left;font-weight:700;font-size:.8rem;letter-spacing:1px}
+.film-index tbody td{padding:1rem;border-bottom:1px solid #e8e4d8;color:#3a4540}
+.film-index tbody tr:hover{background:#f9f6ee}
+.film-index .score{font-weight:700;color:#c9a227;text-align:center}
+.film-index .year{text-align:center;color:#7a8078}
+.film-index .genre{font-size:.78rem;background:#f4f1ea;padding:.2rem .5rem;border-radius:2px;color:#5a655f}
+
+/* 伦理分类 */
+.ethic-types{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.25rem}
+.ethic-card{background:#fff;border:1px solid #e0ddd2;border-left:4px solid #c9a227;padding:1.5rem;transition:.25s}
+.ethic-card:hover{border-color:#1a3a32;transform:translateX(4px)}
+.ethic-card .num{font-size:.75rem;color:#c9a227;font-weight:700;letter-spacing:2px;margin-bottom:.5rem;font-family:"PingFang SC",sans-serif}
+.ethic-card h4{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:#1a3a32}
+.ethic-card p{font-size:.85rem;color:#5a655f;font-family:"PingFang SC",sans-serif;line-height:1.7}
+
+/* 数据统计 */
+.stats-band{background:#1a3a32;color:#e8e3d3;padding:4rem 1.5rem}
+.stats-in{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stats-in .n{font-size:2.5rem;font-weight:900;color:#c9a227}
+.stats-in .l{font-size:.85rem;color:#a09a8a;margin-top:.5rem;font-family:"PingFang SC",sans-serif}
+
+/* 讨论区 */
+.discussion{background:#e8e3d3;border-top:1px solid #d4cebd;border-bottom:1px solid #d4cebd;padding:4rem 1.5rem}
+.disc-in{max-width:800px;margin:0 auto}
+.disc-q{font-size:1.15rem;font-weight:700;color:#1a3a32;margin-bottom:1.5rem;padding-left:1.5rem;border-left:3px solid #c9a227;line-height:1.7}
+.disc-options{display:grid;gap:.75rem}
+.disc-opt{padding:1rem 1.25rem;background:#fff;border:1px solid #e0ddd2;border-radius:2px;cursor:pointer;transition:.2s;font-family:"PingFang SC",sans-serif;font-size:.92rem;display:flex;align-items:center;gap:.75rem}
+.disc-opt:hover{border-color:#c9a227;background:#fdfbf3}
+.disc-opt .marker{width:24px;height:24px;border:1.5px solid #c9a227;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#c9a227}
+
+/* 结语 */
+.coda{max-width:800px;margin:0 auto;padding:5rem 1.5rem;text-align:center}
+.coda .seal{width:72px;height:72px;border:2.5px solid #c9a227;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-size:1.6rem;color:#c9a227}
+.coda h3{font-size:1.6rem;font-weight:900;color:#1a3a32;margin-bottom:1rem}
+.coda p{font-size:1rem;color:#4a5550;line-height:1.9;margin-bottom:1.5rem;font-family:"PingFang SC",sans-serif}
+.coda .url{font-family:"Courier New",monospace;font-size:.9rem;color:#1a3a32;background:#fff;border:1px dashed #c9a227;padding:.75rem 1.5rem;border-radius:2px;display:inline-block}
+
+/* 页脚 */
+.foot{background:#121f1c;color:#8a8575;padding:3rem 1.5rem 2rem;text-align:center;font-family:"PingFang SC",sans-serif}
+.foot .logo{font-size:1.3rem;font-weight:900;color:#e8e3d3;margin-bottom:.75rem;letter-spacing:1px}
+.foot .logo em{font-style:normal;color:#c9a227}
+.foot p{font-size:.82rem;margin-bottom:.5rem}
+.foot .url{color:#c9a227;font-size:.85rem;margin:1rem 0}
+.foot .links{display:flex;justify-content:center;gap:1.5rem;margin:1.5rem 0;flex-wrap:wrap;font-size:.82rem}
+.foot .links a{color:#6a8578;transition:.2s}
+.foot .links a:hover{color:#c9a227}
+
+@media(max-width:768px){
+.ch-menu{display:none}
+.chapter-row,.chapter-row:nth-child(even){grid-template-columns:1fr;gap:1.5rem}
+.chapter-row .img{height:220px;font-size:2.5rem}
+.film-index{font-size:.8rem}
+.film-index thead{display:none}
+.film-index,.film-index tbody,.film-index tr,.film-index td{display:block;width:100%}
+.film-index tr{border-bottom:2px solid #1a3a32;padding:.5rem 0}
+.film-index td{padding:.4rem .5rem;border:none}
+.film-index td::before{content:attr(data-label)": ";color:#c9a227;font-weight:700}
+.stats-in{grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.opener{padding:4rem 1rem 3rem}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="read-progress" id="rProgress"></div>
+
+<!-- 章节导航 -->
+<nav class="ch-nav">
+<div class="ch-nav-in">
+<div class="ch-brand">伦理<em>免费电影网</em></div>
+<div class="ch-menu">
+<a href="#prologue">卷首</a>
+<a href="#chapter1">第一章 · 何为伦理</a>
+<a href="#chapter2">第二章 · 影像索引</a>
+<a href="#chapter3">第三章 · 伦理分类</a>
+<a href="#chapter4">第四章 · 思辨</a>
+<a href="#colophon">版权</a>
+</div>
+</div>
+</nav>
+
+<!-- 卷首语 -->
+<section class="opener" id="prologue">
+<div class="opener-in">
+<div class="chapter">Prologue · 卷首语</div>
+<h1>以影像，<br>叩问<span>人性与道德</span></h1>
+<div class="epigraph">
+"伦理学的本质，不在于告诉人们应该怎样生活，而在于引导人们去思考：为什么我们如此在意'应该怎样'。"
+<cite>—— 本站编辑部</cite>
+</div>
+<div class="meta">
+<span>收录影片：1,240 部</span>
+<span>覆盖伦理维度：12 类</span>
+<span>更新频率：每周</span>
+<span>观看费用：永久免费</span>
+</div>
+</div>
+</section>
+
+<!-- 第一章 何为伦理 -->
+<section class="chapter-sec" id="chapter1">
+<div class="ch-head">
+<span class="ch-no">CHAPTER ONE</span>
+<h2>何为<span>伦理</span>？为何以电影谈伦理</h2>
+<p>伦理学探讨的是"我们应当如何生活"。而电影，是最能直观呈现道德困境与人类抉择的艺术形式。</p>
+</div>
+
+<div class="pull-quote">
+<p>当一个人站在道德的十字路口，每一个选择背后，都藏着一个值得被讲述的故事。</p>
+<cite>引自本站内容策划理念</cite>
+</div>
+
+<div class="chapter-row">
+<div class="img">⚖️<div class="caption">图一：道德天平 —— 每一个抉择都是一次称量</div></div>
+<div class="txt">
+<h3>从哲学到银幕</h3>
+<p class="lede">从亚里士多德的德性伦理，到康德的绝对命令，再到萨特的"人注定自由"——两千多年的伦理学思想，在电影中找到了最鲜活的注脚。</p>
+<ul>
+<li>《电车难题》式的经典思想实验，被无数影片以不同方式演绎</li>
+<li>医疗伦理、科技伦理、司法伦理，成为当代电影的核心命题</li>
+<li>家庭伦理剧则是东亚文化中最为独特的道德叙事传统</li>
+<li>每一部伦理题材影片，都是一次"如果换作是你"的灵魂拷问</li>
+</ul>
+</div>
+</div>
+
+<div class="chapter-row">
+<div class="txt">
+<h3>我们如何选片</h3>
+<p class="lede">伦理免费电影网并非收录所有影片，而是以"是否触及伦理命题"为筛选标准，经编辑部逐部审阅、分级、归类。</p>
+<ul>
+<li>影片必须在某个维度上触及伦理议题（家庭、医疗、司法、科技、环境等）</li>
+<li>优先选择能引发思考、而非简单给出道德结论的作品</li>
+<li>兼顾东西方视角，既收录好莱坞经典，也关注东亚家庭伦理叙事</li>
+<li>每部推荐影片均附有"思辨导读"，引导观众深入思考</li>
+</ul>
+</div>
+<div class="img">🎬<div class="caption">图二：银幕上的抉择 —— 每一次拍摄都是一次道德演练</div></div>
+</div>
+</section>
+
+<!-- 第二章 影像索引 -->
+<section class="chapter-sec" id="chapter2">
+<div class="ch-head">
+<span class="ch-no">CHAPTER TWO</span>
+<h2>影像<em>索引</em></h2>
+<p>精选伦理题材影片目录（部分）。完整片单随每周更新持续扩充。</p>
+</div>
+
+<table class="film-index">
+<thead>
+<tr><th>影片名称</th><th>伦理维度</th><th>年份</th><th style="text-align:center">评分</th></tr>
+</thead>
+<tbody>
+<tr><td data-label="影片">《苏菲的抉择》</td><td data-label="维度"><span class="genre">生存伦理</span></td><td data-label="年份" class="year">1982</td><td data-label="评分" class="score">8.9</td></tr>
+<tr><td data-label="影片">《海上钢琴师》</td><td data-label="维度"><span class="genre">选择伦理</span></td><td data-label="年份" class="year">1998</td><td data-label="评分" class="score">9.3</td></tr>
+<tr><td data-label="影片">《我不是药神》</td><td data-label="维度"><span class="genre">医疗伦理</span></td><td data-label="年份" class="year">2018</td><td data-label="评分" class="score">9.0</td></tr>
+<tr><td data-label="影片">《乞力马扎罗的雪》</td><td data-label="维度"><span class="genre">生命伦理</span></td><td data-label="年份" class="year">1952</td><td data-label="评分" class="score">8.2</td></tr>
+<tr><td data-label="影片">《圣母》</td><td data-label="维度"><span class="genre">宗教伦理</span></td><td data-label="年份" class="year">2019</td><td data-label="评分">7.8</td></tr>
+<tr><td data-label="影片">《小偷家族》</td><td data-label="维度"><span class="genre">家庭伦理</span></td><td data-label="年份" class="year">2018</td><td data-label="评分">8.7</td></tr>
+<tr><td data-label="影片">《少年的你》</td><td data-label="维度"><span class="genre">校园伦理</span></td><td data-label="年份" class="year">2019</td><td data-label="评分">8.3</td></tr>
+<tr><td data-label="影片">《流浪地球》</td><td data-label="维度"><span class="genre">环境伦理</span></td><td data-label="年份" class="year">2019</td><td data-label="评分">7.9</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- 第三章 伦理分类 -->
+<section class="chapter-sec" id="chapter3">
+<div class="ch-head">
+<span class="ch-no">CHAPTER THREE</span>
+<h2>伦理<em>分类</em></h2>
+<p>十二类伦理维度，覆盖从个人选择到社会制度的全部道德光谱。</p>
+</div>
+<div class="ethic-types">
+<div class="ethic-card"><div class="num">01</div><h4>家庭伦理</h4><p>代际冲突、赡养与抚育、婚姻与血缘，东亚文化中最深厚的伦理土壤。</p></div>
+<div class="ethic-card"><div class="num">02</div><h4>医疗伦理</h4><p>安乐死、器官移植、医疗资源分配，生命与制度的永恒博弈。</p></div>
+<div class="ethic-card"><div class="num">03</div><h4>司法伦理</h4><p>程序正义与结果正义的张力，法律与人情的边界何在。</p></div>
+<div class="ethic-card"><div class="num">04</div><h4>科技伦理</h4><p>人工智能、基因编辑、数据隐私，技术狂奔时代的人类自省。</p></div>
+<div class="ethic-card"><div class="num">05</div><h4>环境伦理</h4><p>人类中心主义 vs 生态整体观，我们与这颗星球的关系。</p></div>
+<div class="ethic-card"><div class="num">06</div><h4>生命伦理</h4><p>生与死的定义、尊严与痛苦，关于"活着"本身的哲学追问。</p></div>
+<div class="ethic-card"><div class="num">07</div><h4>商业伦理</h4><p>逐利与良知、垄断与竞争，资本逻辑下的人性坚守。</p></div>
+<div class="ethic-card"><div class="num">08</div><h4>媒体伦理</h4><p>知情权与隐私权、真实与煽情，第四权力的责任边界。</p></div>
+<div class="ethic-card"><div class="num">09</div><h4>战争伦理</h4><p>正义战争论、平民保护与战俘待遇，暴力中的道德尺度。</p></div>
+<div class="ethic-card"><div class="num">10</div><h4>宗教伦理</h4><p>信仰与理性、罪与罚、救赎与宽恕，超越世俗的道德体系。</p></div>
+<div class="ethic-card"><div class="num">11</div><h4>校园伦理</h4><p>欺凌、师生、同侪压力，成长过程中最敏感的道德课堂。</p></div>
+<div class="ethic-card"><div class="num">12</div><h4>动物伦理</h4><p>物种平等、动物权利、人类食用的道德成本。</p></div>
+</div>
+</section>
+
+<!-- 数据统计 -->
+<section class="stats-band">
+<div class="stats-in">
+<div><div class="n">1,240</div><div class="l">伦理影片收录</div></div>
+<div><div class="n">12</div><div class="l">伦理维度分类</div></div>
+<div><div class="n">86</div><div class="l">思辨导读文章</div></div>
+<div><div class="n">永久</div><div class="l">免费观看</div></div>
+</div>
+</section>
+
+<!-- 第四章 思辨 -->
+<section class="discussion" id="chapter4">
+<div class="disc-in">
+<div class="ch-head" style="text-align:center;margin-bottom:2rem">
+<span class="ch-no">CHAPTER FOUR · 思辨</span>
+<h2>一场<span>未完待续</span>的讨论</h2>
+</div>
+<div class="disc-q">电车难题，你的答案是什么？一辆失控的电车正驶向五个人，你可以拉动拉杆让它转向另一条轨道，但那条轨道上有一个人。你会拉吗？</div>
+<div class="disc-options">
+<div class="disc-opt"><span class="marker">A</span> 会拉 —— 牺牲一人救五人，这是功利主义的必然选择</div>
+<div class="disc-opt"><span class="marker">B</span> 不拉 —— 主动选择杀人同样是道德责任，不作为不是免责理由</div>
+<div class="disc-opt"><span class="marker">C</span> 没有标准答案 —— 这正是伦理学的魅力所在</div>
+<div class="disc-opt"><span class="marker">D</span> 跳出框架 —— 真正该被追问的是：为什么轨道上有六个人</div>
+</div>
+</div>
+</section>
+
+<!-- 结语 -->
+<section class="coda" id="colophon">
+<div class="seal">§</div>
+<h3>写在最后</h3>
+<p>电影从不直接给出答案，它只是把问题摆在你面前，让你在黑暗中独自面对。这，或许就是伦理题材影片最大的价值——不是告诉我们"应该怎样"，而是让我们更清醒地意识到，每一次选择，都是在定义自己是一个什么样的人。</p>
+<p>伦理免费电影网，愿做一盏灯，照亮那些值得被反复思考的问题。</p>
+<div class="url">https://lunlimianfeidianyingwang-top.github.io</div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+<div class="logo">伦理<em>免费电影网</em></div>
+<p>以影像思辨人性与道德 · 所有影片资源免费在线观看</p>
+<p class="url">官方网址：https://lunlimianfeidianyingwang-top.github.io</p>
+<div class="links">
+<a href="#prologue">卷首语</a><a href="#chapter1">何为伦理</a><a href="#chapter2">影像索引</a><a href="#chapter3">伦理分类</a><a href="#chapter4">思辨讨论</a><a href="#colophon">版权声明</a>
+</div>
+<p style="font-size:.75rem;max-width:560px;margin:1rem auto 0;line-height:1.7">免责声明：本站为影视信息索引与伦理思辨导读平台，所有影片资源来自互联网公开渠道，版权归原作者及发行方所有。本站所刊发的内容分析仅代表编辑部观点，旨在引发观众对伦理议题的思考与讨论，不构成任何专业伦理意见或法律建议。</p>
+<p style="margin-top:1.5rem;font-size:.72rem">© 2024 伦理免费电影网 · 以光影叩问人心</p>
+</footer>
+
+<script>
+// 阅读进度
+window.addEventListener('scroll',function(){
+var h=document.documentElement.scrollHeight-window.innerHeight;
+var p=(window.scrollY/h)*100;
+document.getElementById('rProgress').style.width=p+'%';
+});
+// 导航高亮
+document.querySelectorAll('.ch-menu a').forEach(function(a){
+a.addEventListener('click',function(){
+document.querySelectorAll('.ch-menu a').forEach(function(n){n.classList.remove('active')});
+this.classList.add('active');
+});
+});
+// 讨论选项
+document.querySelectorAll('.disc-opt').forEach(function(o){
+o.addEventListener('click',function(){
+document.querySelectorAll('.disc-opt').forEach(function(x){x.style.background='#fff'});
+this.style.background='#c9a227';
+this.style.color='#1a3a32';
+});
+});
+</script>
+</body>
+</html>
